@@ -26,21 +26,22 @@ body {
   margin: 0 auto 24px auto;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 .placeholder {
   color: #888;
 }
 
-/* ===== 헤더 ===== */
+/* ===== 헤더 (배경색 전체 적용, 여백 없음, 하단 선 제거) ===== */
 .cv-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #333;
+  margin: -18mm -22mm 20px -22mm;
+  padding: 18mm 22mm 18mm 22mm;
   line-height: 1.6;
+  background-color: #F0F0F0;
 }
 
 .header-left {
@@ -54,7 +55,7 @@ body {
   height: 215px;
   object-fit: cover;
   flex-shrink: 0;
-  border: 1px solid #ccc;
+  border: 1px solid #e5e5e5;
 }
 
 .header-text {
@@ -108,10 +109,10 @@ body {
 .cv-section h2 {
   margin: 0 0 10px 0;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.5;
-  color: #83788E;
-  border-bottom: 1px solid #ddd;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e5e5e5;
   padding-bottom: 6px;
 }
 
@@ -305,8 +306,8 @@ a.info-link-value {
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.45;
-  color: #83788E;
-  border-bottom: 1px solid #333;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e5e5e5;
   padding-bottom: 8px;
 }
 
