@@ -1,0 +1,407 @@
+/* A4 크기 및 자동 페이지 넘김 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  background: #EAEAEA;
+  color: #1a1a1a;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 24px 0;
+}
+
+.a4-document {
+  width: 210mm;
+  margin: 0 auto;
+}
+
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 18mm 22mm;
+  margin: 0 auto 24px auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder {
+  color: #888;
+}
+
+/* ===== 헤더 ===== */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+  line-height: 1.6;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-photo {
+  width: 170px;
+  height: 215px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.title-line1,
+.title-line2 {
+  display: block;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.header-intro {
+  margin: 0;
+  font-size: 10.5px;
+  line-height: 1.65;
+  color: #444;
+}
+
+/* ===== 2단 레이아웃 ===== */
+.two-columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.column-left {
+  flex: 1.15;
+  min-width: 0;
+}
+
+.column-right {
+  flex: 0.85;
+  min-width: 0;
+}
+
+/* ===== 섹션 (기본사항, 학력사항 등) — 제목 색 #83788E ===== */
+.cv-section {
+  margin-bottom: 16px;
+}
+
+.cv-section h2 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #83788E;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+/* 기본사항 */
+.info-compact {
+  margin-bottom: 8px;
+}
+
+.info-compact .info-item {
+  display: flex;
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.info-label {
+  flex-shrink: 0;
+  width: 60px;
+  font-weight: 900;
+  font-size: 10px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.info-value {
+  flex: 1;
+  font-size: 10px;
+  color: #333;
+}
+
+a.info-value-link {
+  flex: 1;
+  font-size: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+a.info-value-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.info-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.info-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-link .info-label {
+  width: auto;
+}
+
+.info-sep {
+  color: #999;
+  font-size: 10px;
+}
+
+a.info-link-value {
+  font-size: 10px;
+  color: #666;
+  text-decoration: underline;
+}
+
+/* 학력사항 */
+.edu-item {
+  margin-bottom: 12px;
+}
+
+.edu-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.edu-name {
+  font-size: 10.5px;
+  font-weight: 900;
+  color: #000;
+}
+
+.edu-sep {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.edu-period {
+  font-size: 10px;
+  color: #888;
+}
+
+.edu-detail {
+  margin: 0;
+  font-size: 10px;
+  color: #444;
+  line-height: 1.2;
+}
+
+.edu-sub {
+  display: block;
+  margin: -5px 0 0 0;
+  padding: 2px 6px;
+  font-size: 8.5px;
+  color: #666;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.edu-sub .light {
+  color: #999;
+}
+
+.edu-sub strong {
+  font-weight: 600;
+  color: #333;
+}
+
+/* 공통 */
+.cv-section ul {
+  margin: 0 0 6px 0;
+  padding-left: 16px;
+  line-height: 1.6;
+}
+
+.cv-section li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.cv-section p {
+  margin: 0 0 6px 0;
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+.bullets {
+  list-style: disc;
+  padding-left: 16px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.bullets li {
+  margin-bottom: 6px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.skill-level {
+  font-size: 9px;
+  color: #666;
+  font-weight: normal;
+}
+
+.tech-note {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.page-number {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 16px;
+  padding-top: 10px;
+}
+
+/* ===== 2페이지: 주요 프로젝트 ===== */
+.page-title {
+  margin: 0 0 16px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #83788E;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.project-card {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-main p {
+  margin: 0 0 6px 0;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.project-name {
+  margin: 0 0 6px 0;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.project-meta {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.project-with-thumb {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.project-thumb {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #999;
+}
+
+.project-links {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 9px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #fafafa;
+  color: #555;
+}
+
+/* ===== 인쇄 ===== */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .a4-page {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 18mm 22mm;
+    box-shadow: none;
+    page-break-after: always;
+  }
+
+  .a4-page:last-child {
+    page-break-after: auto;
+  }
+
+  @page {
+    size: A4;
+    margin: 18mm 22mm;
+  }
+
+  .cv-section,
+  .project-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
