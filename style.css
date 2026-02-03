@@ -9,9 +9,29 @@ body {
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
   background: #EAEAEA;
   color: #1a1a1a;
-  font-size: 11px;
-  line-height: 1.6;
-  padding: 24px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 16px 0;
+}
+
+.pdf-save-btn {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 100;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-save-btn:hover {
+  background: #555;
 }
 
 .a4-document {
@@ -22,8 +42,8 @@ body {
 .a4-page {
   width: 210mm;
   min-height: 297mm;
-  padding: 18mm 22mm;
-  margin: 0 auto 24px auto;
+  padding: 14mm 18mm;
+  margin: 0 auto 16px auto;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
@@ -33,26 +53,27 @@ body {
   color: #888;
 }
 
-/* ===== 헤더 (배경색 전체 적용, 여백 없음, 하단 선 제거) ===== */
+/* ===== 헤더 (사진·글씨 세로 중앙, 위아래 여백 동일) ===== */
 .cv-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin: -18mm -22mm 20px -22mm;
-  padding: 18mm 22mm 18mm 22mm;
+  align-items: center;
+  margin: -14mm -18mm 6px -18mm;
+  padding: 10px 18mm 10px 18mm;
   line-height: 1.6;
-  background-color: #F0F0F0;
+  background-color: #E7E5EA;
 }
 
 .header-left {
   display: flex;
   align-items: center;
   gap: 24px;
+  align-self: stretch;
 }
 
 .profile-photo {
-  width: 170px;
-  height: 215px;
+  width: 160px;
+  height: 200px;
   object-fit: cover;
   flex-shrink: 0;
   border: 1px solid #e5e5e5;
@@ -71,7 +92,7 @@ body {
 .title-line1,
 .title-line2 {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #333;
   margin-bottom: 6px;
   font-weight: 700;
@@ -79,39 +100,46 @@ body {
 
 .header-intro {
   margin: 0;
-  font-size: 10.5px;
+  font-size: 12px;
   line-height: 1.65;
   color: #444;
 }
 
-/* ===== 2단 레이아웃 ===== */
+/* ===== 2단 레이아웃 (기본사항·수상내역 길이 동일) ===== */
 .two-columns {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .column-left {
-  flex: 1.15;
+  flex: 1 1 50%;
   min-width: 0;
+  max-width: 50%;
 }
 
 .column-right {
-  flex: 0.85;
+  flex: 1 1 50%;
   min-width: 0;
+  max-width: 50%;
 }
 
-/* ===== 섹션 (기본사항, 학력사항 등) — 제목 색 #83788E ===== */
+/* ===== 섹션 (기본사항, 학력사항 등) ===== */
+.column-left .cv-section:first-child,
+.column-right .cv-section:first-child {
+  margin-top: 14px;
+}
+
 .cv-section {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .cv-section h2 {
-  margin: 0 0 10px 0;
-  font-size: 13px;
+  margin: 0 0 8px 0;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: #877691;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 6px;
 }
@@ -137,20 +165,20 @@ body {
   flex-shrink: 0;
   width: 60px;
   font-weight: 900;
-  font-size: 10px;
+  font-size: 13px;
   color: #000;
   text-transform: uppercase;
 }
 
 .info-value {
   flex: 1;
-  font-size: 10px;
+  font-size: 13px;
   color: #333;
 }
 
 a.info-value-link {
   flex: 1;
-  font-size: 10px;
+  font-size: 13px;
   color: #333;
   text-decoration: none;
 }
@@ -178,11 +206,11 @@ a.info-value-link:hover {
 
 .info-sep {
   color: #999;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 a.info-link-value {
-  font-size: 10px;
+  font-size: 13px;
   color: #666;
   text-decoration: underline;
 }
@@ -201,24 +229,24 @@ a.info-link-value {
 }
 
 .edu-name {
-  font-size: 10.5px;
+  font-size: 13px;
   font-weight: 900;
   color: #000;
 }
 
 .edu-sep {
-  font-size: 10px;
+  font-size: 13px;
   color: #aaa;
 }
 
 .edu-period {
-  font-size: 10px;
+  font-size: 13px;
   color: #888;
 }
 
 .edu-detail {
   margin: 0;
-  font-size: 10px;
+  font-size: 13px;
   color: #444;
   line-height: 1.2;
 }
@@ -227,7 +255,7 @@ a.info-link-value {
   display: block;
   margin: -5px 0 0 0;
   padding: 2px 6px;
-  font-size: 8.5px;
+  font-size: 11px;
   color: #666;
   line-height: 1.5;
   background-color: #f2f2f2;
@@ -258,8 +286,122 @@ a.info-link-value {
 
 .cv-section p {
   margin: 0 0 6px 0;
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.6;
+}
+
+/* 어학/자격증 스타일 */
+.cert-block {
+  margin-bottom: 12px;
+}
+
+.cert-block:last-child {
+  margin-bottom: 0;
+}
+
+.cert-label {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.02em;
+}
+
+.cert-item {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cert-item strong {
+  font-weight: 900;
+}
+
+.cert-item:last-child {
+  margin-bottom: 0;
+}
+
+.cert-date {
+  color: #666;
+  font-weight: 500;
+}
+
+/* 사회활동: 전체 너비 섹션 */
+.section-full {
+  width: 100%;
+}
+
+/* 사회활동: 왼쪽 제목, 오른쪽 설명 (동일 너비 50:50) */
+.activity-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.activity-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.activity-left {
+  flex: 1 1 50%;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.activity-right {
+  flex: 1 1 50%;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.activity-header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.activity-title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.activity-date {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.activity-right p,
+.activity-right .bullets {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.activity-right .bullets {
+  padding-left: 14px;
+  margin-top: 2px;
+}
+
+.activity-right .bullets li {
+  margin-bottom: 1px;
+  font-size: 12px;
 }
 
 .bullets {
@@ -272,13 +414,13 @@ a.info-link-value {
 
 .bullets li {
   margin-bottom: 6px;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.6;
   color: #444;
 }
 
 .skill-level {
-  font-size: 9px;
+  font-size: 12px;
   color: #666;
   font-weight: normal;
 }
@@ -286,14 +428,14 @@ a.info-link-value {
 .tech-note {
   margin-top: 6px;
   margin-bottom: 0;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.6;
   color: #666;
 }
 
 .page-number {
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
   color: #666;
   margin-top: 16px;
@@ -303,10 +445,10 @@ a.info-link-value {
 /* ===== 2페이지: 주요 프로젝트 ===== */
 .page-title {
   margin: 0 0 16px 0;
-  font-size: 1.15rem;
+  font-size: 1.45rem;
   font-weight: 700;
   line-height: 1.45;
-  color: #1a1a1a;
+  color: #877691;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 8px;
 }
@@ -319,20 +461,20 @@ a.info-link-value {
 
 .project-main p {
   margin: 0 0 6px 0;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.6;
   color: #333;
 }
 
 .project-name {
   margin: 0 0 6px 0;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
 }
 
 .project-meta {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.6;
   color: #555;
   margin-bottom: 6px;
@@ -353,7 +495,7 @@ a.info-link-value {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9px;
+  font-size: 12px;
   color: #999;
 }
 
@@ -367,7 +509,7 @@ a.info-link-value {
 .link-btn {
   display: inline-block;
   padding: 3px 8px;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.5;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -375,18 +517,26 @@ a.info-link-value {
   color: #555;
 }
 
-/* ===== 인쇄 ===== */
+/* ===== 인쇄 (화면과 동일하게) ===== */
 @media print {
+  .pdf-save-btn {
+    display: none;
+  }
+
   body {
     background: #fff;
     padding: 0;
   }
 
+  .a4-document {
+    width: 210mm;
+  }
+
   .a4-page {
-    width: 100%;
-    min-height: auto;
+    width: 210mm;
+    min-height: 297mm;
     margin: 0;
-    padding: 18mm 22mm;
+    padding: 14mm 18mm;
     box-shadow: none;
     page-break-after: always;
   }
@@ -395,9 +545,10 @@ a.info-link-value {
     page-break-after: auto;
   }
 
+  /* 페이지 여백 0 → 화면과 동일한 레이아웃으로 출력 */
   @page {
     size: A4;
-    margin: 18mm 22mm;
+    margin: 0;
   }
 
   .cv-section,

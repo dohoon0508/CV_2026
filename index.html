@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button type="button" class="pdf-save-btn" onclick="window.print()">PDF로 저장</button>
   <div class="a4-document">
     <!-- ========== 1페이지 ========== -->
     <div class="a4-page page-1">
@@ -82,56 +83,37 @@
 
           <section class="cv-section">
             <h2>어학/자격증</h2>
-            <p><strong>어학:</strong> TOEIC Speaking IH (2025.12.06)</p>
-            <p><strong>자격증:</strong> Microsoft Azure AI Fundamentals (2023.12.07), SQL 개발자(SQLD) (2024.04.05), 데이터분석 준전문가(ADSP) (2024.03.22), 투자자산운용사 (2025.01.30)</p>
+            <div class="cert-block">
+              <p class="cert-label">어학</p>
+              <p class="cert-item"><strong>TOEIC Speaking IH</strong> <span class="cert-date">(2025.12.06)</span></p>
+            </div>
+            <div class="cert-block">
+              <p class="cert-label">자격증</p>
+              <p class="cert-item"><strong>ADsP</strong> <span class="cert-date">(2025.09.15)</span></p>
+              <p class="cert-item"><strong>구글 애널리틱스</strong> <span class="cert-date">(2026.01.23)</span></p>
+            </div>
           </section>
 
-          <section class="cv-section">
-            <h2>사회활동</h2>
-            <ul>
-              <li>
-                <strong>한국대학생IT경영학회 KUSITMS 31-32기 기획파트 32기 부학회장</strong> 2025.02.–2025.12
-                <ul class="bullets">
-                  <li>2회 기업연계 프로젝트, PM 및 서비스기획, 64명 규모 학회 총괄 등</li>
-                </ul>
-              </li>
-              <li>
-                <strong>중앙대학교 데이터분석학회 DArt-B 3·4기 4기 교육팀장</strong> 2024.03.–2024.12
-                <ul class="bullets">
-                  <li>Python, SQL 기반 과제·프로젝트, 정규 커리큘럼 설계, BigQuery·머신러닝 실습 세션 등</li>
-                </ul>
-              </li>
-              <li>
-                <strong>중앙대학교 경력개발센터 근로장학생</strong> 2022.11–2025.08
-                <ul class="bullets">
-                  <li>채용공고 게재, 학위증·졸업장 관리, 동아리 지원·행사 보고서 작성</li>
-                </ul>
-              </li>
-              <li><strong>중앙대학교 경영경제대학 홍보대사 CAUBEA</strong> 2021.03–2023.02</li>
-              <li><strong>서울상수도 아리수 서포터즈 아르케팀</strong> 2023.09–2023.11</li>
-              <li><strong>KIA 그린서포터즈</strong> 2023.02–2023.12</li>
-            </ul>
-          </section>
         </div>
 
         <div class="column-right">
           <section class="cv-section">
             <h2>수상내역</h2>
+            <p><strong>2026</strong></p>
+            <ul class="bullets">
+              <li>전북대학교 하기 우수 졸업자(총장상)</li>
+              <li>큰사람 프로젝트 핵심인재상(총장상)</li>
+            </ul>
             <p><strong>2025</strong></p>
             <ul class="bullets">
-              <li>KUSITMS X LG전자 기업연계프로젝트 (대상)</li>
-              <li>중앙대학교 경영경제대학 제6회 학술제 (최우수상)</li>
-              <li>중앙대학교 Figma 활용 모바일 앱 기획 대회 (대상)</li>
+              <li>제13회 빅데이터 콘테스트 AI 활용부분 장려상</li>
+              <li>2025 데이터 크리에이터 캠프 장려상</li>
+              <li>6대 핵심역량 인재상 창의인재상 최우수상 (총장상)</li>
+              <li>전북대학교 산하협력 캡스톤 우수상</li>
             </ul>
             <p><strong>2024</strong></p>
             <ul class="bullets">
-              <li>미래에셋 AI Data 페스티벌 (최우수상)</li>
-              <li>데이터안심구역 활용 공동 경진대회 (최우수상)</li>
-              <li>중앙대 데이터분석학회 DArt-B 4기 학술제 (대상)</li>
-            </ul>
-            <p><strong>2023</strong></p>
-            <ul class="bullets">
-              <li>K-digital platform AI 경진대회 'AI로 더 나은 미래' (장려상)</li>
+              <li>전북대학교 SW 창업 아이디어 경진대회 장려상</li>
             </ul>
           </section>
 
@@ -144,6 +126,64 @@
           </section>
         </div>
       </div>
+
+      <!-- 사회활동: 전체 너비, 왼쪽 제목·기간 오른쪽 설명 -->
+      <section class="cv-section section-full">
+        <h2>사회활동</h2>
+        <div class="activity-item">
+          <div class="activity-left">
+            <p class="activity-header">
+              <span class="activity-title">전북대학교 인공지능 학술동아리 JBIG | 임원</span>
+              <span class="activity-date">2025.01 – 2025.12</span>
+            </p>
+          </div>
+          <div class="activity-right">
+            <ul class="bullets">
+              <li>머신러닝 교육 세션 운영 및 학습 자료 제작</li>
+              <li>실습 과제·문제 제작, 피드백 기반 커리큘럼 개선</li>
+            </ul>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-left">
+            <p class="activity-header">
+              <span class="activity-title">전북대학교 총동아리연합회 | 정책국 국원</span>
+              <span class="activity-date">2020.03 – 2020.12</span>
+            </p>
+          </div>
+          <div class="activity-right">
+            <ul class="bullets">
+              <li>학생자치 정책/사업 운영 및 행사 기획·운영 보조</li>
+            </ul>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-left">
+            <p class="activity-header">
+              <span class="activity-title">전북대학교 국제이공학부 | 학생회장</span>
+              <span class="activity-date">2019.03 – 2021.12</span>
+            </p>
+          </div>
+          <div class="activity-right">
+            <ul class="bullets">
+              <li>학부 대표로 학사/복지 의견 수렴 및 학부 행사 총괄 운영</li>
+            </ul>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-left">
+            <p class="activity-header">
+              <span class="activity-title">전북대학교 국제이공학부 학과사무실 | 근로학생</span>
+              <span class="activity-date">2024.09 – 2026.02</span>
+            </p>
+          </div>
+          <div class="activity-right">
+            <ul class="bullets">
+              <li>학과 행정 지원 및 외국인 학생 200명 응대/안내 업무 수행</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <footer class="page-number">1</footer>
     </div>
