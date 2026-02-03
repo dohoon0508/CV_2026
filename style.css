@@ -415,18 +415,112 @@ a.info-link-value {
   color: #444;
 }
 
-.skill-level {
-  font-size: 12px;
-  color: #666;
-  font-weight: normal;
+/* 기술: 카테고리 두 줄(왼쪽 좁게) → 오른쪽 공간 넓게 */
+.skill-section .skill-block {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 6px;
 }
 
-.tech-note {
-  margin-top: 6px;
+.skill-section .skill-block:last-of-type {
+  margin-bottom: 4px;
+}
+
+.skill-section .skill-block-single {
+  align-items: center;
+}
+
+.skill-section .skill-block-single .skill-line {
+  margin: 0;
+}
+
+.skill-section .skill-category-col {
+  flex-shrink: 0;
+  width: 68px;
+  min-width: 68px;
+}
+
+/* 기술 카테고리: 어학 라벨과 같은 느낌(회색, 작은 글씨) */
+.skill-section .skill-category-line {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #888;
+  letter-spacing: 0.02em;
+}
+
+.skill-section .skill-category-line:first-child {
   margin-bottom: 0;
-  font-size: 13px;
-  line-height: 1.6;
+}
+
+.skill-section .skill-category {
+  margin: 0;
+  flex-shrink: 0;
+  width: 68px;
+  min-width: 68px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #888;
+  letter-spacing: 0.02em;
+}
+
+.skill-section .skill-content-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-section .skill-line {
+  margin: 0 0 1px 0;
+  padding-left: 0;
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.skill-section .skill-level {
+  font-size: 10px;
   color: #666;
+  font-weight: normal;
+  margin-right: 4px;
+}
+
+/* 기술: 아래 상중 설명 더 작게 */
+.tech-note {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 9px;
+  line-height: 1.4;
+  color: #888;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.tech-note-segment {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 2px;
+  width: fit-content;
+  font-size: 9px;
+  color: #666;
+}
+
+.tech-note-segment.tech-note-high {
+  background-color: #e8f0e8;
+}
+
+.tech-note-segment.tech-note-mid {
+  background-color: #f5f2e8;
+}
+
+.tech-note-segment.tech-note-low {
+  background-color: #f2f2f2;
 }
 
 .page-number {
