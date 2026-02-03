@@ -13,7 +13,7 @@
     <div class="a4-page page-1">
       <header class="cv-header">
         <div class="header-left">
-          <img src="myphoto.jpg" alt="증명사진" class="profile-photo" />
+          <img src="assets/myphoto.jpg" alt="증명사진" class="profile-photo" />
           <div class="header-text">
             <h1 class="header-title">
               <span class="title-line1">AI를 통해 문제를 해결하는 지원자,</span>
@@ -193,65 +193,124 @@
       <h2 class="page-title">주요 프로젝트</h2>
 
       <article class="project-card">
-        <div class="project-main">
-          <h3 class="project-name">ASET+GO: 부모와 아이가 함께 만드는 미래 금융교육의 혁신</h3>
-          <p class="project-meta">2024.05–10 · <span class="award-badge">미래에셋 AI Data 페스티벌 최우수상 (3인, 알고리즘 개발/서비스 기획)</span></p>
-          <p class="project-desc">유소년 대상 금융 교육과 투자 경험을 결합한 서비스 기획 및 RAG 기반 알고리즘 설계.</p>
-          <p><strong>역할:</strong> 알고리즘 개발 (RAG 아키텍처 설계, Pinecone 벡터 DB 구성 등), 서비스기획 (아이디어 발제, 메타버스 내 기능 및 수익화 구조 설계).</p>
-          <p><strong>소개:</strong> 개인화된 메타버스 환경에서 금융 학습 및 투자 교육 플랫폼.</p>
-        </div>
-        <div class="project-links">
-          <span class="link-btn">발표자료</span>
-          <span class="link-btn">시연</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-main">
-          <h3 class="project-name">Threads로 본 우울과 연결망</h3>
-          <p class="project-meta">2025.01–06 · <span class="award-badge">중앙대 데이터분석학회 DArt-B 4기 학술제 대상 (6인, 데이터분석 파이프라인 구성)</span></p>
-          <p class="project-desc">Threads 데이터를 활용한 우울 표현 사용자의 언어적 특성 및 상호작용 형태 분석·군집화, 대응 전략 도출. 데이터 분석 프로젝트 PM 역할.</p>
-          <p><strong>역할:</strong> Airflow·S3 이용 데이터 수집 파이프라인 구축, 비우울 사용자와의 차이 검증, 전역응집성 지표 소분류 설계 및 계산.</p>
-          <p><strong>결론:</strong> 우울 표현 사용자 연구 결과 요약 및 차별화된 대응·지원 전략 도출.</p>
-        </div>
-        <div class="project-links">
-          <span class="link-btn">발표자료</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-with-thumb">
-          <div class="project-thumb placeholder">썸네일</div>
-          <div class="project-main">
-            <h3 class="project-name">각자의 추억 조각을 모아, 한입에 와앙-치이이즈</h3>
-            <p class="project-meta">2025.09–12 · <span class="award-badge">한국대학생IT경영학회 KUSITMS 32기 밋업(MEET-UP) 프로젝트 우수상 (8인, PM 및 서비스기획)</span></p>
-            <p class="project-desc">모임 후 사진을 쉽고 재미있게 나눌 수 있는 공유 앨범 서비스. PM으로 기획/디자인/프론트엔드/백엔드 팀을 이끌어 진행.</p>
-            <p><strong>역할:</strong> PM (아이디어 발제, 스프린트별 일정·목표 설정), 서비스기획 (유저 리서치, 와이어프레임·기능명세서 작성, BM 구축 등).</p>
-            <p><strong>소개:</strong> 7일 후 원본이 사라지는 소멸형 공유 앨범 서비스.</p>
+        <div class="project-row">
+          <div class="project-col-image">
+            <div class="project-thumbs">
+              <div class="project-thumb">
+                <img src="assets/센티널예시.png" alt="Sentinel 예시 1" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
+                <span class="placeholder">썸네일</span>
+              </div>
+              <div class="project-thumb">
+                <img src="assets/센티널예시2.png" alt="Sentinel 예시 2" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
+                <span class="placeholder">썸네일</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-col-text">
+            <div class="project-main">
+              <div class="project-title-row">
+                <h3 class="project-name">성동구 소상공인 AI 마케팅 도우미 'Sentinel'</h3>
+                <span class="project-date">2025.12</span>
+              </div>
+              <p class="project-award-row"><span class="project-competition">제13회 빅데이터 빅콘테스트</span><span class="project-award">장려상 (3인, 팀 리더 및 AI 아키텍처 설계)</span></p>
+              <p class="project-desc">소상공인의 마케팅 업무 효율화를 위해 지역 상권 및 업종 데이터를 활용한 RAG 기반 지능형 에이전트 서비스입니다.</p>
+              <p><strong>역할:</strong> <strong>PM/AI 개발</strong> | 질문 유형 자동 분류 및 멀티 에이전트 구현, 신한카드·공공데이터 4종 기반 RAG 파이프라인 구축, Flask API 서버 구축 및 배포.</p>
+              <p><strong>성과:</strong> 태스크별 검색 정책을 통해 근거 있는 마케팅 조언을 일관되게 생성하는 데모를 완성했으며, 실전적인 AI 서비스 구현 역량을 입증했습니다.</p>
+            </div>
+            <div class="project-links">
+              <a href="센티널_시연영상_보기.html" target="_blank" rel="noopener noreferrer" class="link-btn">시연영상</a>
+              <a href="센티널_발표자료_보기.html" target="_blank" rel="noopener noreferrer" class="link-btn">발표자료</a>
+            </div>
           </div>
         </div>
-        <div class="project-links">
-          <span class="link-btn">보고서</span>
-          <span class="link-btn">발표자료</span>
-          <span class="link-btn">배포URL</span>
+      </article>
+
+      <article class="project-card">
+        <div class="project-row">
+          <div class="project-col-image"></div>
+          <div class="project-col-text">
+            <div class="project-main">
+              <div class="project-title-row">
+                <h3 class="project-name">위성 사진 기반 산업단지 세그멘테이션</h3>
+                <span class="project-date">2025</span>
+              </div>
+              <p class="project-award-row"><span class="project-competition">2025 데이터 크리에이터 캠프</span><span class="project-award">장려상 (4인 팀 프로젝트, 모델 성능 향상)</span></p>
+              <p class="project-desc">SN10/LS30 위성 데이터와 보조 데이터(GEMS·대기오염)를 결합해 산업단지 영역을 탐지·분할하는 세그멘테이션 모델을 개발했습니다.</p>
+              <p><strong>역할:</strong> mIoU 기반 검증 및 threshold 최적화, TTA·앙상블 조합 탐색으로 성능 비교 후 최적 조합 선정.</p>
+              <p><strong>성과:</strong> 검증·앙상블 기반 성능 최적화를 통해 mIoU 98.5를 달성하여 장려상을 수상했습니다.</p>
+            </div>
+            <div class="project-links">
+              <a href="assets/데이터크리에이터[예선].pdf" target="_blank" rel="noopener noreferrer" class="link-btn">발표자료(예선)</a>
+              <a href="assets/JBIG4.0발표자료_본선.pdf" target="_blank" rel="noopener noreferrer" class="link-btn">발표자료(본선)</a>
+            </div>
+          </div>
         </div>
       </article>
 
       <article class="project-card">
-        <div class="project-with-thumb">
-          <div class="project-thumb placeholder">이미지</div>
-          <div class="project-main">
-            <h3 class="project-name">과거에 열광했던 것, 지금 좋아하는 것, 도전하지 못한 가능성까지 내 모든 모습을 Zip</h3>
-            <p class="project-meta">2025 · <span class="award-badge">한국대학생IT경영학회 KUSITMS X LG전자 기업연계프로젝트 대상 (8인, PM 및 서비스기획)</span></p>
-            <p class="project-desc">LG전자의 라이프스타일 플랫폼 Life.zip의 리브랜딩 및 수익화 방안 제안. PM 역할.</p>
-            <p><strong>역할:</strong> PM (스프린트 일정·목표 관리), 서비스기획 (유저 리서치, 와이어프레임·기능명세서, BM 구축 등).</p>
-            <p><strong>솔루션:</strong> Life.zip을 취향 아카이브 플랫폼으로 재정의, 정보 구조 재설계, 신규 타깃 및 서비스 확장 가능성 제안.</p>
+        <div class="project-row">
+          <div class="project-col-image"></div>
+          <div class="project-col-text">
+            <div class="project-main">
+              <div class="project-title-row">
+                <h3 class="project-name">Threads로 본 우울과 연결망</h3>
+                <span class="project-date">2025.01–06</span>
+              </div>
+              <p class="project-award-row"><span class="project-competition">중앙대 데이터분석학회 DArt-B 4기 학술제</span><span class="project-award">대상 (6인, 데이터분석 파이프라인 구성)</span></p>
+              <p class="project-desc">Threads 데이터를 활용한 우울 표현 사용자의 언어적 특성 및 상호작용 형태 분석·군집화, 대응 전략 도출. 데이터 분석 프로젝트 PM 역할.</p>
+              <p><strong>역할:</strong> Airflow·S3 이용 데이터 수집 파이프라인 구축, 비우울 사용자와의 차이 검증, 전역응집성 지표 소분류 설계 및 계산.</p>
+              <p><strong>결론:</strong> 우울 표현 사용자 연구 결과 요약 및 차별화된 대응·지원 전략 도출.</p>
+            </div>
+            <div class="project-links">
+              <span class="link-btn">발표자료</span>
+            </div>
           </div>
         </div>
-        <div class="project-links">
-          <span class="link-btn">보고서</span>
-          <span class="link-btn">발표자료</span>
-          <span class="link-btn">시연영상</span>
+      </article>
+
+      <article class="project-card">
+        <div class="project-row">
+          <div class="project-col-image"></div>
+          <div class="project-col-text">
+            <div class="project-main">
+              <div class="project-title-row">
+                <h3 class="project-name">각자의 추억 조각을 모아, 한입에 와앙-치이이즈</h3>
+                <span class="project-date">2025.09–12</span>
+              </div>
+              <p class="project-award-row"><span class="project-competition">한국대학생IT경영학회 KUSITMS 32기 밋업(MEET-UP) 프로젝트</span><span class="project-award">우수상 (8인, PM 및 서비스기획)</span></p>
+              <p class="project-desc">모임 후 사진을 쉽고 재미있게 나눌 수 있는 공유 앨범 서비스. PM으로 기획/디자인/프론트엔드/백엔드 팀을 이끌어 진행.</p>
+              <p><strong>역할:</strong> PM (아이디어 발제, 스프린트별 일정·목표 설정), 서비스기획 (유저 리서치, 와이어프레임·기능명세서 작성, BM 구축 등).</p>
+              <p><strong>소개:</strong> 7일 후 원본이 사라지는 소멸형 공유 앨범 서비스.</p>
+            </div>
+            <div class="project-links">
+              <span class="link-btn">보고서</span>
+              <span class="link-btn">발표자료</span>
+              <span class="link-btn">배포URL</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-row">
+          <div class="project-col-image"></div>
+          <div class="project-col-text">
+            <div class="project-main">
+              <div class="project-title-row">
+                <h3 class="project-name">과거에 열광했던 것, 지금 좋아하는 것, 도전하지 못한 가능성까지 내 모든 모습을 Zip</h3>
+                <span class="project-date">2025</span>
+              </div>
+              <p class="project-award-row"><span class="project-competition">한국대학생IT경영학회 KUSITMS X LG전자 기업연계프로젝트</span><span class="project-award">대상 (8인, PM 및 서비스기획)</span></p>
+              <p class="project-desc">LG전자의 라이프스타일 플랫폼 Life.zip의 리브랜딩 및 수익화 방안 제안. PM 역할.</p>
+              <p><strong>역할:</strong> PM (스프린트 일정·목표 관리), 서비스기획 (유저 리서치, 와이어프레임·기능명세서, BM 구축 등).</p>
+              <p><strong>솔루션:</strong> Life.zip을 취향 아카이브 플랫폼으로 재정의, 정보 구조 재설계, 신규 타깃 및 서비스 확장 가능성 제안.</p>
+            </div>
+            <div class="project-links">
+              <span class="link-btn">보고서</span>
+              <span class="link-btn">발표자료</span>
+              <span class="link-btn">시연영상</span>
+            </div>
+          </div>
         </div>
       </article>
 

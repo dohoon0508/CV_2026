@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinel 시연영상</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; }
+    .toolbar { margin-bottom: 12px; }
+    .toolbar a { color: #fff; text-decoration: none; padding: 8px 12px; background: #555; border-radius: 4px; font-size: 14px; }
+    .toolbar a:hover { background: #666; }
+    video { max-width: 100%; max-height: 85vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+    .fallback { color: #999; font-size: 14px; margin-top: 16px; text-align: center; }
+    .fallback a { color: #6af; }
+  </style>
+</head>
+<body>
+  <div class="toolbar"><a href="index.html">← 이력서로 돌아가기</a></div>
+  <video controls playsinline preload="metadata">
+    <source src="assets/센티널_시현자료.mov" type="video/quicktime" />
+    <source src="assets/센티널_시현자료.mov" type="video/mp4" />
+    <p class="fallback">이 브라우저에서는 재생이 제한될 수 있습니다. <a href="assets/센티널_시현자료.mov" download>영상 다운로드</a> 후 재생해 주세요.</p>
+  </video>
+  <p class="fallback">Safari에서는 .mov 재생이 잘 됩니다. Chrome/Edge는 MP4 변환 시 재생이 원활합니다.</p>
+</body>
+</html>
